@@ -10,19 +10,22 @@
 
 <body>
     <?php
-    $phrase = "Giraffe Academy";
-    echo strtolower($phrase);
-    echo "<br>";
-    echo strtoupper($phrase);
-    echo "<br>";
-    echo $phrase[0];
-    echo "<br>";
-    $phrase[0] = "B";
-    echo $phrase;
-    echo "<br>";
-    echo str_replace("Biraffe", "Panda", $phrase);
-    echo "<br>";
-    echo substr($phrase, 8, 3);
+    function webLog($index, $data)
+    {
+        echo "$index. $data";
+        echo "<br>";
+        echo "Data Type = " . gettype($data);
+        echo "<br><br>";
+    }
+
+    webLog(1, abs(-100));
+    webLog(2, pow(2, 4));
+    webLog(3, sqrt(144));
+    webLog(4, max(2, 10));
+    webLog(5, min(2, 10));
+    webLog(6, round(3.7));
+    webLog(7, ceil(3.3));
+    webLog(8, floor(3.9));
     ?>
 </body>
 
