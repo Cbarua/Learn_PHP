@@ -9,6 +9,21 @@
 </head>
 
 <body>
+    <form action="site.php" method="get">
+        <label for="username">Name :</label>
+        <input type="text" name="username" id="username">
+        <br>
+        <label for="age">Age :</label>
+        <input type="number" name="age" id="age">
+        <br>
+        <input type="submit" value="submit">
+    </form>
+
+    <br>
+
+    <p>Your Name is <?php echo $_GET['username'] ?></p>
+    <p>Your Age is <?php echo $_GET['age'] ?></p>
+    
     <?php
     function webLog($index, $data)
     {
@@ -17,15 +32,6 @@
         echo "Data Type = " . gettype($data);
         echo "<br><br>";
     }
-
-    webLog(1, abs(-100));
-    webLog(2, pow(2, 4));
-    webLog(3, sqrt(144));
-    webLog(4, max(2, 10));
-    webLog(5, min(2, 10));
-    webLog(6, round(3.7));
-    webLog(7, ceil(3.3));
-    webLog(8, floor(3.9));
     ?>
 </body>
 
