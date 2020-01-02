@@ -9,10 +9,10 @@
 </head>
 
 <body>
-    <form action="site.php" method="get">
-        <label for="name">Name</label>
+    <form action="site.php" method="post">
+        <label for="password">Password</label>
         <br>
-        <input type="text" name="name">
+        <input type="password" name="password">
         <br>
         <input type="submit" value="submit">
     </form>
@@ -20,8 +20,7 @@
     <br>
 
     <?php
-    echo $_GET['age'];
-    // http://localhost:4000/www/site.php?age=90
+    echo $_POST['password'];
     ?>
 
     <?php
