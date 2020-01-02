@@ -10,20 +10,17 @@
 
 <body>
     <form action="site.php" method="get">
-        <label for="username">Name :</label>
-        <input type="text" name="username" id="username">
+        <input type="number" name="num1">
         <br>
-        <label for="age">Age :</label>
-        <input type="number" name="age" id="age">
+        <input type="number" name="num2">
         <br>
-        <input type="submit" value="submit">
+        <input type="submit" value="calculate">
     </form>
 
     <br>
 
-    <p>Your Name is <?php echo $_GET['username'] ?></p>
-    <p>Your Age is <?php echo $_GET['age'] ?></p>
-    
+    <p>Answer: <?php echo $_GET['num1'] + $_GET['num2'] ?></p>
+
     <?php
     function webLog($index, $data)
     {
