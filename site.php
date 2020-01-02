@@ -10,34 +10,18 @@
 
 <body>
     <form action="site.php" method="get">
-        <label for="color">Color</label>
+        <label for="name">Name</label>
         <br>
-        <input type="text" name="color">
+        <input type="text" name="name">
         <br>
-
-        <label for="pluralNoun">Plural Noun</label>
-        <br>
-        <input type="text" name="pluralNoun">
-        <br>
-
-        <label for="celebrity">Celebrity</label>
-        <br>
-        <input type="text" name="celebrity">
-        <br>
-
         <input type="submit" value="submit">
     </form>
 
     <br>
 
     <?php
-    $color = $_GET['color'];
-    $pluralNoun = $_GET['pluralNoun'];
-    $celebrity = $_GET['celebrity'];
-
-    echo "<p>Roses are $color</p>";
-    echo "<p>$pluralNoun are blue</p>";
-    echo "<p>I love $celebrity</p>";
+    echo $_GET['age'];
+    // http://localhost:4000/www/site.php?age=90
     ?>
 
     <?php
