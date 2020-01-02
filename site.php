@@ -10,16 +10,35 @@
 
 <body>
     <form action="site.php" method="get">
-        <input type="number" name="num1">
+        <label for="color">Color</label>
         <br>
-        <input type="number" name="num2">
+        <input type="text" name="color">
         <br>
-        <input type="submit" value="calculate">
+
+        <label for="pluralNoun">Plural Noun</label>
+        <br>
+        <input type="text" name="pluralNoun">
+        <br>
+
+        <label for="celebrity">Celebrity</label>
+        <br>
+        <input type="text" name="celebrity">
+        <br>
+
+        <input type="submit" value="submit">
     </form>
 
     <br>
 
-    <p>Answer: <?php echo $_GET['num1'] + $_GET['num2'] ?></p>
+    <?php
+    $color = $_GET['color'];
+    $pluralNoun = $_GET['pluralNoun'];
+    $celebrity = $_GET['celebrity'];
+
+    echo "<p>Roses are $color</p>";
+    echo "<p>$pluralNoun are blue</p>";
+    echo "<p>I love $celebrity</p>";
+    ?>
 
     <?php
     function webLog($index, $data)
