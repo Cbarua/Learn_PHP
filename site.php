@@ -10,14 +10,8 @@
 
 <body>
     <form action="site.php" method="post">
-        <label for="apples">Apples</label>
-        <input type="checkbox" name="fruits[]" value="apples">
-        <br>
-        <label for="oranges">Oranges</label>
-        <input type="checkbox" name="fruits[]" value="oranges">
-        <br>
-        <label for="pears">Pears</label>
-        <input type="checkbox" name="fruits[]" value="pears">
+        <label for="student">Student: </label>
+        <input type="text" name="student">
         <br>
         <input type="submit" value="submit">
     </form>
@@ -25,16 +19,9 @@
     <br>
 
     <?php
-
-    $fruits = $_POST['fruits'];
-    webLog(1, $fruits);
-
-    // $friends = array("Dinuka", "Sameera", "Lahiru", "Vidura", "Amal");
-    // $friends[10] = "Namal";
-    // // echo count($friends);
-    // webLog(1, $friends[10]);
-    // webLog(2, print_r($friends, true));
-    // var_dump($friends);
+    $grades = array("Dinuka" => "A+", "Sameera" => "A-", "Lahiru" => "F");
+    $grades["Lahiru"] = "C+";
+    echo $grades[$_POST["student"]];
     ?>
 
     <?php
