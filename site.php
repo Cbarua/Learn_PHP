@@ -10,9 +10,14 @@
 
 <body>
     <form action="site.php" method="post">
-        <label for="password">Password</label>
+        <label for="apples">Apples</label>
+        <input type="checkbox" name="fruits[]" value="apples">
         <br>
-        <input type="password" name="password">
+        <label for="oranges">Oranges</label>
+        <input type="checkbox" name="fruits[]" value="oranges">
+        <br>
+        <label for="pears">Pears</label>
+        <input type="checkbox" name="fruits[]" value="pears">
         <br>
         <input type="submit" value="submit">
     </form>
@@ -20,7 +25,16 @@
     <br>
 
     <?php
-    echo $_POST['password'];
+
+    $fruits = $_POST['fruits'];
+    webLog(1, $fruits);
+
+    // $friends = array("Dinuka", "Sameera", "Lahiru", "Vidura", "Amal");
+    // $friends[10] = "Namal";
+    // // echo count($friends);
+    // webLog(1, $friends[10]);
+    // webLog(2, print_r($friends, true));
+    // var_dump($friends);
     ?>
 
     <?php
