@@ -9,33 +9,41 @@
 </head>
 
 <body>
-    <!-- <form action="site.php" method="post">
-        <label for="student">Student: </label>
-        <input type="text" name="student">
+    <form action="site.php" method="post">
+        <label for="fnum">First number: </label>
+        <input type="number" name="fnum" step="0.001">
+        <br>
+        <label for="operator">Operator: </label>
+        <input type="text" name="operator">
+        <br>
+        <label for="lnum">Last number: </label>
+        <input type="number" name="lnum" step="0.001">
         <br>
         <input type="submit" value="submit">
-    </form> -->
+    </form>
 
-    <!-- <br> -->
+    <br>
 
     <?php
-    function sayHi($name, $occupation)
-    {
-        echo "Hello $name, you are a $occupation <br>";
-    }
-
-    sayHi('Chinmoy', 'student');
-    sayHi('Dave', 'doctor');
-    sayHi('Tom', 'teacher');
-
-    function cube($num)
-    {
-        echo '<br>Start<br>';
-        return $num * $num * $num;
-        echo "End";
-    }
-
-    echo cube(16);
+        $fnum = $_POST['fnum'];
+        $lnum = $_POST['lnum'];
+        $operator = $_POST['operator'];
+        
+        if ($operator == '+') {
+            echo $fnum + $lnum;
+        }
+        elseif ($operator == '-') {
+            echo $fnum - $lnum;
+        }
+        elseif ($operator == '*') {
+            echo $fnum * $lnum;
+        }
+        elseif ($operator == '/') {
+            echo $fnum / $lnum;
+        }
+        else {
+            echo "Invalid operator";
+        }
     ?>
 
     <?php
