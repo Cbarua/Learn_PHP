@@ -9,19 +9,33 @@
 </head>
 
 <body>
-    <form action="site.php" method="post">
+    <!-- <form action="site.php" method="post">
         <label for="student">Student: </label>
         <input type="text" name="student">
         <br>
         <input type="submit" value="submit">
-    </form>
+    </form> -->
 
-    <br>
+    <!-- <br> -->
 
     <?php
-    $grades = array("Dinuka" => "A+", "Sameera" => "A-", "Lahiru" => "F");
-    $grades["Lahiru"] = "C+";
-    echo $grades[$_POST["student"]];
+    function sayHi($name, $occupation)
+    {
+        echo "Hello $name, you are a $occupation <br>";
+    }
+
+    sayHi('Chinmoy', 'student');
+    sayHi('Dave', 'doctor');
+    sayHi('Tom', 'teacher');
+
+    function cube($num)
+    {
+        echo '<br>Start<br>';
+        return $num * $num * $num;
+        echo "End";
+    }
+
+    echo cube(16);
     ?>
 
     <?php
